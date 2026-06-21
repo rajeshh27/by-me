@@ -122,7 +122,7 @@ function Hero() {
         <div className="hero__visual" ref={imageRef}>
           <div className="hero__image-wrapper">
             <img
-              src="/images/hero-banner.png"
+              src="/images/hero-banner.webp"
               alt="By-Me handcrafted natural soaps collection"
               className="hero__image"
             />

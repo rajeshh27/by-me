@@ -8,7 +8,7 @@ const products = [
     name: 'LimePop',
     tagline: 'Zesty Fresh Cleanse',
     price: 249,
-    image: '/images/limepop.png',
+    image: '/images/limepop.webp',
     badge: 'Bestseller',
   },
   {
@@ -16,7 +16,7 @@ const products = [
     name: 'Coffee Bliss',
     tagline: 'Energizing Exfoliant',
     price: 279,
-    image: '/images/coffee.png',
+    image: '/images/coffee.webp',
     badge: null,
   },
   {
@@ -24,7 +24,7 @@ const products = [
     name: 'Honey Lavender',
     tagline: 'Calm & Nourish',
     price: 299,
-    image: '/images/honey-lavender.png',
+    image: '/images/honey-lavender.webp',
     badge: 'New',
   },
   {
@@ -32,7 +32,7 @@ const products = [
     name: 'Turmeric Glow',
     tagline: 'Radiance Booster',
     price: 269,
-    image: '/images/turmeric.png',
+    image: '/images/turmeric.webp',
     badge: null,
   },
   {
@@ -40,7 +40,7 @@ const products = [
     name: 'Rose Petal',
     tagline: 'Gentle & Romantic',
     price: 289,
-    image: '/images/rose.png',
+    image: '/images/rose.webp',
     badge: 'Popular',
   },
   {
@@ -48,7 +48,7 @@ const products = [
     name: 'Charcoal Detox',
     tagline: 'Deep Purifying',
     price: 299,
-    image: '/images/charcoal.png',
+    image: '/images/charcoal.webp',
     badge: null,
   },
   {
@@ -56,7 +56,7 @@ const products = [
     name: 'Aloe Vera',
     tagline: 'Soothe & Hydrate',
     price: 259,
-    image: '/images/aloe-vera.png',
+    image: '/images/aloe-vera.webp',
     badge: null,
   },
   {
@@ -64,7 +64,7 @@ const products = [
     name: 'Gift Basket',
     tagline: 'The Perfect Present',
     price: 1499,
-    image: '/images/gift-basket.png',
+    image: '/images/gift-basket.webp',
     badge: 'Gift Set',
   },
 ]

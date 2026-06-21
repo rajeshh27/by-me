@@ -8,7 +8,7 @@ function Story() {
           <div className="story__image-col reveal-left">
             <div className="story__image-wrapper">
               <img
-                src="/images/about-section.png"
+                src="/images/about-section.webp"
                 alt="By-Me soap making process with natural ingredients"
                 className="story__image"
                 loading="lazy"
