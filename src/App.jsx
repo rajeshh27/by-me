@@ -20,13 +20,13 @@ function App() {
   useEffect(() => {
     // Initialize Lenis smooth scrolling
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
+      lerp: 0.08,
+      wheelMultiplier: 1.1,
       smoothWheel: true,
     })
 
     lenisRef.current = lenis
+    window.lenis = lenis
 
     // Connect Lenis to GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update)

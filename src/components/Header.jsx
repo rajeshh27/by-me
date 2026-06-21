@@ -26,8 +26,12 @@ function Header() {
 
   const scrollTo = (href) => {
     setMenuOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (window.lenis) {
+      window.lenis.scrollTo(href)
+    } else {
+      const el = document.querySelector(href)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
