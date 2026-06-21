@@ -1,0 +1,304 @@
+/* ============================================
+   BY-ME — Global Design System
+   ============================================ */
+
+/* CSS Custom Properties */
+:root {
+  /* ---- Colors ---- */
+  --clr-green-dark: #0D530E;
+  --clr-green-forest: #306D29;
+  --clr-green-light: #4a8b3f;
+  --clr-green-muted: #e8f0e6;
+  --clr-brown-coffee: #6b4226;
+  --clr-tan: #d5aa83;
+  --clr-tan-light: #e8c9a8;
+  --clr-cream: #f7f2ec;
+  --clr-cream-dark: #efe6da;
+  --clr-white: #ffffff;
+  --clr-black: #1a1a1a;
+  --clr-text: #2d2d2d;
+  --clr-text-light: #5a5a5a;
+  --clr-text-muted: #8a8a8a;
+  --clr-border: #e0d6ca;
+
+  /* ---- Gradients ---- */
+  --grad-hero: linear-gradient(135deg, #f7f2ec 0%, #e8f0e6 50%, #f7f2ec 100%);
+  --grad-green: linear-gradient(135deg, #0D530E 0%, #306D29 100%);
+  --grad-warm: linear-gradient(135deg, #f7f2ec 0%, #efe6da 50%, #e8c9a8 100%);
+  --grad-card: linear-gradient(180deg, rgba(247,242,236,0) 0%, rgba(247,242,236,0.8) 100%);
+
+  /* ---- Typography ---- */
+  --ff-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --ff-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-hero: clamp(2.8rem, 6vw, 5.5rem);
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.2rem, 2vw, 1.75rem);
+  --fs-body: clamp(0.95rem, 1.2vw, 1.1rem);
+  --fs-small: clamp(0.8rem, 1vw, 0.9rem);
+  --fs-xs: 0.75rem;
+
+  /* ---- Spacing ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* ---- Borders & Radii ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 2px 8px rgba(13, 83, 14, 0.06);
+  --shadow-md: 0 4px 20px rgba(13, 83, 14, 0.08);
+  --shadow-lg: 0 8px 40px rgba(13, 83, 14, 0.12);
+  --shadow-card: 0 4px 24px rgba(107, 66, 38, 0.08);
+  --shadow-card-hover: 0 12px 40px rgba(107, 66, 38, 0.15);
+
+  /* ---- Transitions ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.7s;
+
+  /* ---- Layout ---- */
+  --max-width: 1200px;
+  --header-height: 72px;
+}
+
+/* ============================================
+   Reset & Base
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scrolling */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: var(--clr-text);
+  background-color: var(--clr-cream);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--clr-black);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--ff-body);
+}
+
+input, textarea {
+  font-family: var(--ff-body);
+  border: none;
+  outline: none;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+  color: var(--clr-green-dark);
+}
+
+.section-subtitle {
+  font-size: var(--fs-body);
+  text-align: center;
+  color: var(--clr-text-light);
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+  font-weight: 300;
+}
+
+/* ============================================
+   Liquid Glass Effect
+   ============================================ */
+
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  transition: all var(--duration-normal) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left var(--duration-slow) var(--ease-out);
+}
+
+.liquid-glass:hover::before {
+  left: 100%;
+}
+
+.liquid-glass:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(13, 83, 14, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Green variant */
+.liquid-glass-green {
+  background: rgba(13, 83, 14, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(13, 83, 14, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--clr-green-dark);
+  transition: all var(--duration-normal) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass-green::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(13, 83, 14, 0.1),
+    transparent
+  );
+  transition: left var(--duration-slow) var(--ease-out);
+}
+
+.liquid-glass-green:hover::before {
+  left: 100%;
+}
+
+.liquid-glass-green:hover {
+  background: rgba(13, 83, 14, 0.2);
+  border-color: rgba(13, 83, 14, 0.35);
+  box-shadow: 0 8px 32px rgba(13, 83, 14, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Reveal Animations (GSAP targets)
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-tan);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-brown-coffee);
+}
+
+/* ============================================
+   Selection
+   ============================================ */
+
+::selection {
+  background: var(--clr-green-dark);
+  color: var(--clr-white);
+}
